@@ -1,0 +1,116 @@
+body{
+	font-family:Microsoft YaHei;
+}
+section.chats div {
+  max-width: 255px;
+  word-wrap: break-word;
+  margin-bottom: 20px;
+  line-height: 24px;
+}
+section.chats p{
+  margin: 0;
+}
+section.chats p.username{
+  max-width: 355px;
+  font-weight: bold;
+}
+section.chats p.username img{margin-right:10px;vertical-align:top;}
+section.chats p.username .un_date{display:inline-block;font-weight:normal;font-size:12px;color:#666;white-space:nowrap;}
+section.chats p.username .un_date .username_f{display:inline-block;font-weight:bold;color:#333;max-width:160px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;vertical-align:top;}
+
+p.notification{
+  text-align: center;
+  font-size:14px;
+  color:#666;
+}
+
+.clear {
+  clear: both;
+}
+
+.from-me {
+  position: relative;
+  margin:-10px 60px 0 0;
+  padding: 5px 10px;
+  color: white;
+  background: #0B93F6;
+  border-radius: 3px;
+  clear:both;
+  float: right;
+}
+.from-me:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 2px;
+  right: -9px;
+  height: 20px;
+  border: 10px solid #0B93F6;
+  border-color:#0B93F6 transparent transparent #0B93F6;
+  /*border-bottom-left-radius: 16px 14px;*/
+  -webkit-transform: translate(0, -2px);
+}
+/*
+.from-me:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: -2px;
+  right: -56px;
+  width: 26px;
+  height: 20px;
+  background: white;
+  border-bottom-left-radius: 10px;
+  -webkit-transform: translate(-30px, -2px);
+}
+*/
+
+.from-them {
+  position: relative;
+  margin:-10px 0 0 60px;
+  padding: 5px 10px;
+  background: #E5E5EA;
+  border-radius: 3px;
+  color: black;
+  float: left;
+}
+.from-them:before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: -11px;
+  height: 20px;
+  border: 10px solid #E5E5EA;
+  /*border-bottom-right-radius: 16px 14px;*/
+  border-color: #E5E5EA transparent transparent #E5E5EA;
+  -webkit-transform: translate(0, -2px);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+/*
+.from-them:after {  	
+  content: "";
+  position: absolute;
+  z-index: 3;
+  bottom: -2px;
+  left: 4px;
+  width: 26px;
+  height: 20px;
+  background: white;
+  border-bottom-right-radius: 10px;
+  -webkit-transform: translate(-30px, -2px);
+}
+*/
+
+section.chats p.from-unme{float:right;}
+section.chats p.from-unme img{float:right;margin-left:10px;margin-right:0;}
+section.chats p.from-unme .un_date .username_f{float:right;margin-left:10px;}
+.username-list {
+  line-height: 38px;
+}
+.bar.item-input-inset .item-input-wrapper{margin:0 10px 0 0;height:31px;line-height:31px;border:1px #ccc solid;background:#fff;border-radius:3px 0 0 3px;}
+.button.button-positive{background:#ff8d19;border-color:#ff8d19;line-height:29px;}
+.bar.bar-stable{background:#fff;}
+.bar.bar-stable.bar-footer{background:none;}
+.bar.item-input-inset .item-input-wrapper input{width:99%;}

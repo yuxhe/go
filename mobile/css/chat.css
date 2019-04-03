@@ -1,0 +1,72 @@
+.repeatMessage img{
+		width:40px;
+		height:40px;
+		border-radius: 60%;
+	}
+	.userlist  img{
+		width:40px;
+		height:40px;
+		border-radius: 50%;
+	}
+	.cardhead img{
+		width:40px;
+		height:40px;
+		border-radius: 70%;
+		float:left;
+	}
+	.userinfo{
+		float:left;
+		margin-top:10px;
+	}
+	.tabs-icon-only .tabs{
+		display:none
+	}
+	.chatsren{
+		font-size:14px;
+		font-family:"微软雅黑";
+		margin-bottom:10px;
+		margin-left:15px;
+		margin-right:15px;
+	}
+	.chatsren button{
+    	min-width: 20px;
+	    min-height: 15px;
+	    font-size: 12px;
+	    line-height: 26px;
+	}
+	.button.button-light{border-color:#666;font-family:Microsoft YaHei;}
+	.chatsren_renshu{
+		float:left;
+		padding-top:5px;
+		color:#999;
+	}
+	.chatsren_qing{
+		float:right;
+		padding-top:5px;
+	}
+	.xianshi{
+		display:inline;
+	}
+	.buxianshi{
+		display:none;
+	}
+	.repeatMessage .from-them .from-me{
+		margin-bottom:-5px;
+	}
+	section.chats div {   
+    	margin-bottom: 10px;
+
+	}
+	
+	.androidContent{
+		margin-top:-52px;
+	}
+	.iphoneContent{
+		margin-top:50px;
+	}
+	.iphoneContentTop{
+		height:35px;width:100%;z-index:100 ;
+	}
+	.androidContentTop{
+		height:35px;width:100%;z-index:100;margin-top:-92px;
+	}

@@ -1,0 +1,25 @@
+<ion-view view-title="用户列表">
+  <ion-content>
+
+    <div class="list userlist">
+      <a ng-repeat="user in userList" nav-transition="none" class="item item-avatar" 
+	href="#/tab/chats/?room={{user.room}}&accno={{user.accno}}&username={{user.username}}">
+        <img ng-src="{{user.headimg}}">
+        <h2 class="username-list">{{user.username}}</h2>
+      </a>
+    </div>
+
+    <div ng-if="data.length == 0" class="card">
+      <div class="item item-text-wrap">
+        There are {{data.numUsers}} users
+      </div>
+    </div>
+
+    <!--<div ng-if="data.numUsers >0 && data.length > 0" class="card">
+      <div class="item item-text-wrap">
+        ... and {{data.numUsers - data.length}} more users 
+      </div>
+    </div>-->
+
+  </ion-content>
+</ion-view>

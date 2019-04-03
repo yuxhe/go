@@ -1,0 +1,69 @@
+<ion-view view-title="圈聊" style="font-size:12px;">
+<ion-content scroll="false"  ng-class="mobileTypeTOP()">  	<!-- height:35px;width:100%;z-index:100 -->	
+	
+	<p ng-show="renshu.numUsers == 0" align="center">连接中。。。</p>
+	<div class="clear"></div>
+	<p class="chatsren">
+	<span class="chatsren_renshu">当前在线人数：{{renshu.numUsers}}人</span>
+	<span class="chatsren_qing">
+		<button class="button  button-light" ng-click="clearMessage()">清屏</button> 
+	 &nbsp <button class="button  button-light" ng-click="lockMessage()" ng-show="suo == 1" >停止滚屏</button> 
+		  <button class="button  button-light" ng-click="solutionLockMessage()" ng-show="suo != 1">自动滚屏</button> 
+	</span>
+	</p>
+	 <div class="clear"></div>
+ 
+</ion-content>
+
+	
+  <ion-content  class="padding" ng-class="mobileType()"> <!--  scroll="{{suo == 1}}" ng-class="mobileType()"-->
+   
+  <section class="chats">
+	
+	
+    <span ng-repeat="message in messages" class="repeatMessage" >
+      <span ng-show="!message.notification">
+        <p ng-class='getUnClass(message.accno)'> <!--  ng-show="!messageIsMine(message.accno)" -->
+		
+		<img ng-src="{{message.headimg}}" ng-show="isJoinMessage(message.type,message.headimg)">
+		
+		<img ng-src="images/login_default1.png" ng-if="isJoin2Message(message.type,message.headimg)">
+	
+		<span ng-show="{{message.message != null}}" class="un_date"><span class="username_f">{{message.username}}</span> &nbsp; {{message.dateTime | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+		</p>
+		
+        <div ng-class='getBubbleClass(message.accno)' ng-show="{{message.message != null}}">
+          <p ng-bind="message.message" ></p>
+        </div>
+        <div class="clear"></div>
+      </span>
+      <span ng-show="message.notification">
+        <p class="notification" ng-bind="message.message"></p>
+      </span>
+    </span>
+	
+  </section>
+
+  </ion-content  >
+
+
+
+
+
+
+
+  <form name="sendMessageForm" ng-submit="sendMessage(data.message)" novalidate >
+      <ion-footer-bar class="bar-stable item-input-inset message-footer" keyboard-attach style="bottom:0px;">
+          <label class="item-input-wrapper">
+              <input id="msg-input" ng-change="updateTyping()" ng-model="data.message" class="input-message" 
+			type="text" placeholder="请输入聊天内容" style="height:30px;" maxlength="200">
+          </label>
+          <div class="footer-btn-wrap">
+            <button class="button button-positive button-small footer-btn" type="submit"
+                ng-disabled="!data.message || data.message === ''" style="height:25px;">发送
+            </button>
+          </div>
+      </ion-footer-bar>
+  </form>
+
+</ion-view>
